@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Productos / Products | TOSAB</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;background:#f3fbfa;color:#254b50}
+header{background:#d8f2ec;text-align:center;padding:28px 15px}
+header h1{font-size:42px;letter-spacing:5px;color:#167d79}
+header p{margin-top:8px;color:#245c75;font-style:italic}
+nav{background:#245c75;padding:16px;text-align:center}
+nav a{color:white;text-decoration:none;margin:0 12px;font-weight:bold;display:inline-block;padding:5px}
+nav a:hover{color:#8fe0ce}
+.titulo{text-align:center;padding:35px 15px 10px}
+h2{color:#167d79;font-size:32px;margin-bottom:12px}
+.titulo p{line-height:1.7}
+.catalogo{max-width:1150px;margin:25px auto 45px;padding:0 18px;display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:24px}
+.tarjeta{background:white;border-radius:18px;overflow:hidden;text-align:center;box-shadow:0 5px 18px #245c751c;padding-bottom:25px;transition:.3s}
+.tarjeta:hover{transform:translateY(-5px)}
+.tarjeta img{width:100%;height:240px;object-fit:cover}
+.tarjeta h3{color:#167d79;margin:18px 10px 10px;font-size:22px}
+.tarjeta p{line-height:1.6;padding:0 17px;margin-bottom:18px}
+.boton{display:inline-block;background:#167d79;color:white;border:none;text-decoration:none;padding:12px 23px;border-radius:25px;font-weight:bold;cursor:pointer;transition:.3s}
+.boton:hover{background:#245c75}
+footer{background:#245c75;color:white;text-align:center;padding:20px}
+.modal{display:none;position:fixed;z-index:10;inset:0;background:rgba(16,44,51,.82);padding:20px;overflow-y:auto;align-items:center;justify-content:center}
+.modal.con-abierto{display:flex}
+.detalle{background:white;width:100%;max-width:650px;border-radius:20px;padding:25px;text-align:center;position:relative;margin:auto}
+.detalle img{width:100%;max-width:470px;height:350px;object-fit:contain;border-radius:12px;margin:15px auto}
+.detalle h2{margin-top:12px}
+.detalle p{line-height:1.8;margin-bottom:18px}
+.cerrar{position:absolute;right:15px;top:10px;background:#245c75;color:white;border:0;border-radius:50%;width:38px;height:38px;font-size:23px;cursor:pointer}
+@media(max-width:600px){header h1{font-size:35px}nav a{margin:6px 5px}.detalle img{height:260px}}
+</style>
+</head>
+<body>
+<header>
+<h1>TOSAB</h1>
+<p>Vida artesanal / Artisan lifestyle</p>
+</header>
+
+<nav>
+<a href="index.html">Inicio / Home</a>
+<a href="productos.html">Productos / Products</a>
+<a href="nosotros.html">Nosotros / About us</a>
+<a href="contacto.html">Contáctanos / Contact</a>
+</nav>
+
+<section class="titulo">
+<h2>Nuestras lámparas / Our lamps</h2>
+<p>Descubre nuestros diseños artesanales y encuentra el que mejor combine con tus espacios.</p>
+<p>Discover our handcrafted designs and find the one that best complements your spaces.</p>
+</section>
+
+<main class="catalogo">
+<article class="tarjeta">
+<img src="https://i.ibb.co/Q1jyCvt/Whats-App-Image-2026-10-13-at-6-58-55-PM.jpg" alt="Lámpara 1">
+<h3>Lámpara de techo / Ceiling light</h3>
+<p>Lámpara artesanal de yute, elaborada a mano para dar un toque natural y acogedor.</p>
+<p>Handcrafted jute lamp, made by hand to add a natural and cozy touch.</p>
+<button class="boton" onclick="abrirDetalle(0)">Clic aquí / Click here</button>
+</article>
+
+<article class="tarjeta">
+<img src="https://i.ibb.co/C5XZBkdP/Whats-App-Image-2026-10-13-at-6-58-56-PM.jpg" alt="Lámpara 2">
+<h3>Lámpara cuadrada / Square Lamp</h3>
+<p>Un diseño decorativo que aporta calidez y personalidad a cualquier ambiente.</p>
+<p>A decorative design that adds warmth and character to any space.</p>
+<button class="boton" onclick="abrirDetalle(1)">Clic aquí / Click here</button>
+</article>
+
+<article class="tarjeta">
+<img src="https://i.ibb.co/cKq8TrZv/Whats-App-Image-2026-10-13-at-6-58-57-PM.jpg" alt="Lámpara 3">
+<h3>Lámpara rectangular / Rectangular lamp</h3>
+<p>Una pieza artesanal que combina sencillez, creatividad y encanto natural.</p>
+<p>A handcrafted piece that combines simplicity, creativity, and natural charm.</p>
+<button class="boton" onclick="abrirDetalle(2)">Clic aquí / lick here</button>
+</article>
+
+<article class="tarjeta">
+<img src="https://i.ibb.co/V0tCh4zw/Whats-App-Image-2026-10-13-at-6-58-56-PM-2.jpg" alt="Lámpara 4">
+<h3>Lámpara de corazon / Heart-Shaped Lamp</h3>
+<p>Ideal para complementar la decoración de hogares, oficinas y espacios de trabajo.</p>
+<p>Perfect for complementing the decor of homes, offices, and workspaces.</p>
+<button class="boton" onclick="abrirDetalle(3)">Clic aquí / Click here</button>
+</article>
+
+<article class="tarjeta">
+<img src="https://i.ibb.co/1f6FGNS9/Whats-App-Image-2026-10-13-at-6-58-57-PM-1.jpg" alt="Lámpara 5">
+<h3>Lámpara de circulo / Circle Lamp</h3>
+<p>Un diseño hecho con dedicación para iluminar y embellecer tus espacios.</p>
+<p>A design crafted with care to brighten and beautify your spaces.</p>
+<button class="boton" onclick="abrirDetalle(4)">Clic aquí / Circle Lamp</button>
+</article>
+</main>
+
+<!-- Ventana interactiva de detalles -->
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="detalleTitulo" onclick="cerrarFondo(event)">
+<div class="detalle">
+<button class="cerrar" onclick="cerrarDetalle()" aria-label="Cerrar">×</button>
+<h2 id="detalleTitulo">Lámpara</h2>
+<img id="detalleImagen" src="imagenes/lampara1.jpg" alt="Detalle de la lámpara">
+<p id="detalleDescripcion"></p>
+<button class="boton" onclick="cerrarDetalle()">Volver al catálogo / Back to the catalog </button>
+</div>
+</div>
+
+<footer>© 2026 TOSAB | Vida artesanal</footer>
+
+<script>
+const lamparas = [
+{
+nombre: "Lámpara de techo / Ceiling light",
+imagen: "https://i.ibb.co/JFw29Fcf/Whats-App-Image-2026-10-13-at-6-58-55-PM-1.jpg",
+descripcion: "Esta lámpara artesanal de yute está elaborada a mano con dedicación. Su estilo natural es ideal para decorar y darle calidez a tus espacios. / This handmade jute lamp is crafted with care. Its natural style is perfect for decorating and adding warmth to your spaces."
+},
+{
+nombre: "Lámpara cuadrada / Square Lamp",
+imagen: "https://i.ibb.co/7Jfj8CTy/Whats-App-Image-2026-10-13-at-6-58-56-PM-3.jpg",
+descripcion: "Un diseño artesanal pensado para aportar personalidad y una sensación acogedora a la decoración de tu hogar. / A handcrafted design created to add personality and a cozy feel to your home decor."
+},
+{
+nombre: "Lámpara rectangular / Rectangular lamp",
+imagen: "https://i.ibb.co/353yHgVT/Whats-App-Image-2026-10-13-at-6-58-56-PM-1.jpg",
+descripcion: "Esta pieza combina el encanto de los materiales naturales con el trabajo hecho a mano, ideal para crear ambientes especiales. / This piece combines the charm of natural materials with handcrafted work, making it ideal for creating special atmospheres."
+},
+{
+nombre: "Lámpara de corazon / Heart-Shaped Lamp",
+imagen: "https://i.ibb.co/tTGB3N90/Whats-App-Image-2026-10-13-at-6-58-57-PM-3.jpg",
+descripcion: "Una lámpara decorativa que puedes incorporar en tu hogar, oficina o espacio de trabajo para dar un toque artesanal. / A decorative lamp that you can incorporate into your home, office, or workspace to add a touch of artisanal charm."
+},
+{
+nombre: "Lámpara de circulo / Circle Lamp",
+imagen: "https://i.ibb.co/1f6FGNS9/Whats-App-Image-2026-10-13-at-6-58-57-PM-1.jpg",
+descripcion: "Un diseño único de TOSAB, creado con dedicación para quienes disfrutan de la decoración natural y artesanal. / A unique design by TOSAB, created with care for those who appreciate natural and handcrafted decor."
+}
+];
+
+function abrirDetalle(indice) {
+const producto = lamparas[indice];
+document.getElementById("detalleTitulo").textContent = producto.nombre;
+document.getElementById("detalleImagen").src = producto.imagen;
+document.getElementById("detalleImagen").alt = producto.nombre;
+document.getElementById("detalleDescripcion").textContent = producto.descripcion;
+document.getElementById("modal").classList.add("con-abierto");
+document.body.style.overflow = "hidden";
+}
+
+function cerrarDetalle() {
+document.getElementById("modal").classList.remove("con-abierto");
+document.body.style.overflow = "";
+}
+
+function cerrarFondo(evento) {
+if (evento.target.id === "modal") cerrarDetalle();
+}
+
+document.addEventListener("keydown", function(evento) {
+if (evento.key === "Escape") cerrarDetalle();
+});
+</script>
+</body>
+</html>
